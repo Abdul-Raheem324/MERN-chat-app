@@ -1,0 +1,71 @@
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #222;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.navbar-container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.chatlist-container {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.chat-container {
+  animation: slideInFromRight 0.6s ease-out;
+}

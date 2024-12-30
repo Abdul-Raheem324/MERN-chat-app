@@ -1,0 +1,23 @@
+// {
+//     "compilerOptions": {
+//       "baseUrl": "src", // Set baseUrl to 'src'
+//       "paths": {
+//         "@/*": ["*"] // Maps '@/' to anything in 'src'
+//       }
+//     },
+//     "include": ["src/**/*.{js,jsx}"], // Include both .js and .jsx files
+//     "exclude": ["node_modules"] // Exclude node_modules
+//   }
+  
+{
+    "compilerOptions": {
+      // ...
+      "baseUrl": ".",
+      "paths": {
+        "@/*": [
+          "./src/*"
+        ]
+      }
+      // ...
+    }
+  }
