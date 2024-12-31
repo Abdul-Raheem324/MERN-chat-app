@@ -31,7 +31,7 @@ import {
 import ChatMessages from "./miscellaneous/ChatMessages.jsx";
 import { io } from "socket.io-client";
 
-const ENDPOINT = "http://localhost:3000";
+const ENDPOINT = "https://qualityconnect.onrender.com";
 let socket, selectedChatCompare;
 
 function SingleChat({ fetchAgain, setFetchAgain }) {

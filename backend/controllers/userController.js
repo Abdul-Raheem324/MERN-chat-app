@@ -57,11 +57,9 @@ export const loginUser = async (req, res) => {
     }
     const user = await User.findOne({ email });
     if (!user) {
-      return res
-        .status(400)
-        .json({
-          message: "Account with this email doesn't exist. Please sign up.",
-        });
+      return res.status(400).json({
+        message: "Account with this email doesn't exist. Please sign up.",
+      });
     }
     if (!user.isVerified) {
       return res
@@ -171,12 +169,10 @@ export const editProfile = async (req, res) => {
 
 export const verifyemail = async (req, res) => {
   try {
-    const { token } = req.params; // The token from the URL
-    console.log("Verifying token:", req.params.token);
-    // Find the user by the token and check if it's still valid
+    const { token } = req.params; 
     const user = await User.findOne({
-      verifyToken: token, // Compare with the token stored in the database
-      verifyTokenExpiry: { $gt: Date.now() }, // Ensure the token hasn't expired
+      verifyToken: token,
+      verifyTokenExpiry: { $gt: Date.now() },
     });
 
     if (!user) {
@@ -185,19 +181,16 @@ export const verifyemail = async (req, res) => {
         .json({ message: "Invalid or expired verification link." });
     }
 
-    // If token matches, verify the user
     user.isVerified = true;
-    user.verifyToken = undefined; // Clear the token after successful verification
-    user.verifyTokenExpiry = undefined; // Clear expiry
+    user.verifyToken = undefined; 
+    user.verifyTokenExpiry = undefined;
     await user.save();
 
     res.status(200).json({ message: "Email successfully verified!" });
   } catch (error) {
     console.error("Error verifying email:", error);
-    res
-      .status(500)
-      .json({
-        message: "Something went wrong during the email verification process.",
-      });
+    res.status(500).json({
+      message: "Something went wrong during the email verification process.",
+    });
   }
 };

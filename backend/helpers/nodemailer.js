@@ -39,7 +39,7 @@ export const sendEmail = async ({ email, emailType, userId }) => {
           <p>Thank you for registering with <strong>QualityConnect</strong>, your go-to chat application.</p>
           <p>To complete your registration, please verify your email address by clicking the link below:</p>
           <div style="text-align: center; margin: 20px 0;">
-            <a href="${process.env.APP_URL}/verify/${encodeURIComponent(
+            <a href="${process.env.DEPLOYED_APP_URL}/verify/${encodeURIComponent(
         hashedToken
       )}" 
                style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
