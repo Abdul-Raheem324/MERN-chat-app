@@ -1,6 +1,6 @@
 # QualityConnect (MERN-chat-app)
 
-A **real-time chat application** built with the **MERN** (MongoDB, Express.js, React, Node.js) stack. This app allows users to chat in one-on-one and group chats, send files, receive notifications, and more. Additionally, the app integrates **AI-powered entertainment** features for a unique experience. With a smooth UI, real-time features, and robust functionality, this chat app is designed for seamless communication.
+A **real-time chat application** built with the **MERN** (MongoDB, Express.js, React, Node.js) stack. This app allows users to chat in one-on-one and group chats, receive notifications, and more. Additionally, the app integrates **AI-powered entertainment** features for a unique experience. With a smooth UI, real-time features, and robust functionality, this chat app is designed for seamless communication.
 
 ## Features
 

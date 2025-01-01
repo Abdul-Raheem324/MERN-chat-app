@@ -71,7 +71,7 @@ function ChatBot() {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       sendMessage();
-      setUserMessage("");
+      setInputValue("");
     }
   };
 
